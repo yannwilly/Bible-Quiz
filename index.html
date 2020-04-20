@@ -17,8 +17,7 @@
         <h3>HOW WELL DO YOU KNOW THE BIBLE?</h3>
     </div>
 		<header class="quiz-header">
-			<h2>Quiz</h2>
-            <h2 id="timer">Time: 00:00:00s</h2>
+            <h2 id="timer" class="p-6 alert alert-warning">Time: 00:00:00s</h2>
 			<div class="quiz-results">
 				<p><strong>Score:</strong> <span class="quiz-score"></span></p>
 			</div>
@@ -30,19 +29,19 @@
 			<div class="quiz-question" role="radiogroup">
 				<p id="q">press start to begin!</p>
 				<div class="form-check">
-					<input type="radio" id="q1" name="q1" value="1" onclick="button(this)">
+					<input type="radio" id="q1" name="q1" value="1" onclick="button(this)" required>
 					<label for="q1" id="q1a"></label>
 				</div>
 				<div class="form-check">
-					<input type="radio" id="q2" name="q1" value="2" onclick="button(this)">
+					<input type="radio" id="q2" name="q1" value="2" onclick="button(this)" required>
 					<label for="q2" id="q1b"></label>
 				</div>
 				<div class="form-check">
-					<input type="radio" id="q3" name="q1" value="3" onclick="button(this)">
+					<input type="radio" id="q3" name="q1" value="3" onclick="button(this)" required>
 					<label for="q3" id="q1c"></label>
 				</div>
 				<div class="form-check">
-					<input type="radio" id="q4" name="q1" value="4" onclick="button(this)">
+					<input type="radio" id="q4" name="q1" value="4" onclick="button(this)" required>
 					<label for="q3" id="q1d"></label>
 				</div>
 			</div>
@@ -51,7 +50,7 @@
             <button type="button" class="btn btn-success p-6 button1" onclick="startQuiz()" id="start">START</button>
 			<button type="button" onclick="Next()" id="next">Next</button>
             <button type="button" class="button1 btn btn-danger p-6" id="restart" onclick="reload()">Restart</button>
-            <div class="alert alert-danger mt-2 " id="scoreBar" role="alert">
+            <div class="alert alert-secondary mt-2 " id="scoreBar" role="alert">
              <h2 id="scoreCard">Score: 0/0</h2>
             </div>
             </div>

@@ -11,6 +11,7 @@
   var op3=document.getElementById('q1c');
   var op4=document.getElementById('q1d');
   var nextQ;
+  var locked=true;
 
  var  someArray = [8,4,0,5,7,3,9,1,6,2];
 someArray.sort(() => Math.random() - 0.5);
@@ -163,8 +164,11 @@ window.onload=hide();
 window.onload=app.hidden();
   function button(ele){
            	     //alert(ele.value);
+                    locked = true;
                     this.selectedele= ele.value;
                     this.selectedId = ele.id;
+                  
+
                     //alert(this.selectedId);
                     //app.check(ele.value);
            }
@@ -173,8 +177,13 @@ window.onload=app.hidden();
    function  Next(){
 
               //this.selectedId.checked = false;
-              document.getElementById(selectedId).checked = false;
-              app.check(this.selectedele);
+             if(locked)
+             {
+                  locked = false;
+                  document.getElementById(selectedId).checked = false;
+                  app.check(this.selectedele);
+                  
+             }
              // app.clickAble();
          } 
 
