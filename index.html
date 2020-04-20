@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <title>Bible Quiz</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="quizGame/css/quiz.css">
+  </head>
+  <body>
+  <main class="container">
+	<section class="quiz-container">
+    <div class="alert alert-danger" role="alert">
+        <h3>HOW WELL DO YOU KNOW THE BIBLE?</h3>
+    </div>
+		<header class="quiz-header">
+			<h2>Quiz</h2>
+            <h2 id="timer">Time: 00:00:00s</h2>
+			<div class="quiz-results">
+				<p><strong>Score:</strong> <span class="quiz-score"></span></p>
+			</div>
+		</header>
+
+		<!-- Quiz form -->
+		<form class="quiz-form" autocomplete="off">
+			<!-- Question -->
+			<div class="quiz-question" role="radiogroup">
+				<p id="q">press start to begin!</p>
+				<div class="form-check">
+					<input type="radio" id="q1" name="q1" value="1" onclick="button(this)">
+					<label for="q1" id="q1a"></label>
+				</div>
+				<div class="form-check">
+					<input type="radio" id="q2" name="q1" value="2" onclick="button(this)">
+					<label for="q2" id="q1b"></label>
+				</div>
+				<div class="form-check">
+					<input type="radio" id="q3" name="q1" value="3" onclick="button(this)">
+					<label for="q3" id="q1c"></label>
+				</div>
+				<div class="form-check">
+					<input type="radio" id="q4" name="q1" value="4" onclick="button(this)">
+					<label for="q3" id="q1d"></label>
+				</div>
+			</div>
+			<!-- end question -->
+
+            <button type="button" class="btn btn-success p-6 button1" onclick="startQuiz()" id="start">START</button>
+			<button type="button" onclick="Next()" id="next">Next</button>
+            <button type="button" class="button1 btn btn-danger p-6" id="restart" onclick="reload()">Restart</button>
+            <div class="alert alert-danger mt-2 " id="scoreBar" role="alert">
+             <h2 id="scoreCard">Score: 0/0</h2>
+            </div>
+            </div>
+		</form>
+		<!-- end quiz -->
+	</section>
+</main>
+
+<script src="quizGame/js/quiz.js"></script>
+      
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
